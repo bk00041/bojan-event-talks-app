@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Future of AI: Generative Models",
+    "speakers": ["Alex Johnson"],
+    "category": ["AI", "Machine Learning"],
+    "duration": 60,
+    "description": "A deep dive into the latest advancements in generative AI and what they mean for the future of technology."
+  },
+  {
+    "title": "Building Scalable Systems with Microservices",
+    "speakers": ["Brenda Smith", "Chris Wilson"],
+    "category": ["Architecture", "Backend"],
+    "duration": 60,
+    "description": "Learn the principles of microservice architecture and how to design, build, and deploy scalable and resilient systems."
+  },
+  {
+    "title": "Modern Frontend Development with React and Vite",
+    "speakers": ["Samantha Lee"],
+    "category": ["Frontend", "JavaScript", "React"],
+    "duration": 60,
+    "description": "An overview of modern frontend development workflows, focusing on the speed and efficiency of React and Vite."
+  },
+  {
+    "title": "The Quantum Computing Threat to Cryptography",
+    "speakers": ["David Chen"],
+    "category": ["Security", "Cryptography"],
+    "duration": 60,
+    "description": "Understand the potential impact of quantum computing on current cryptographic standards and explore post-quantum solutions."
+  },
+  {
+    "title": "Data Storytelling: Visualizing Insights",
+    "speakers": ["Maria Garcia"],
+    "category": ["Data Science", "Visualization"],
+    "duration": 60,
+    "description": "Discover how to turn raw data into compelling stories using modern data visualization techniques and tools."
+  },
+  {
+    "title": "DevOps Culture: Beyond the Tools",
+    "speakers": ["James Brown", "Patricia Miller"],
+    "category": ["DevOps", "Culture"],
+    "duration": 60,
+    "description": "A talk about the cultural and organizational changes needed to successfully implement DevOps practices."
+  }
+]

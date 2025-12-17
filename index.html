@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Talks Today</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background-color: #f8f9fa; color: #333; }
+    .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    header { text-align: center; padding-bottom: 20px; border-bottom: 1px solid #ddd; }
+    h1 { margin: 0; font-size: 2.5em; }
+    #search { width: 100%; padding: 10px; margin: 20px 0; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px; }
+    .talk { display: flex; border-bottom: 1px solid #eee; padding: 20px 0; }
+    .talk.hidden { display: none; }
+    .talk .time { flex: 0 0 150px; font-weight: bold; color: #007bff; }
+    .talk .details h3 { margin-top: 0; }
+    .talk.break .details h3 { color: #888; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tech Talks Today</h1>
+      <p>A one-day event filled with technical talks.</p>
+    </header>
+    <input type="text" id="search" placeholder="Search by category...">
+    <div id="schedule">
+      
+      <div class="talk" data-category="ai machine learning">
+        <div class="time">10:00 AM - 11:00 AM</div>
+        <div class="details">
+          <h3>The Future of AI: Generative Models</h3>
+          <p><strong>Speakers:</strong> Alex Johnson</p>
+          <p><strong>Category:</strong> AI, Machine Learning</p>
+          <p>A deep dive into the latest advancements in generative AI and what they mean for the future of technology.</p>
+        </div>
+      </div>
+    
+      <div class="talk" data-category="architecture backend">
+        <div class="time">11:10 AM - 12:10 PM</div>
+        <div class="details">
+          <h3>Building Scalable Systems with Microservices</h3>
+          <p><strong>Speakers:</strong> Brenda Smith, Chris Wilson</p>
+          <p><strong>Category:</strong> Architecture, Backend</p>
+          <p>Learn the principles of microservice architecture and how to design, build, and deploy scalable and resilient systems.</p>
+        </div>
+      </div>
+    
+      <div class="talk" data-category="frontend javascript react">
+        <div class="time">12:20 PM - 01:20 PM</div>
+        <div class="details">
+          <h3>Modern Frontend Development with React and Vite</h3>
+          <p><strong>Speakers:</strong> Samantha Lee</p>
+          <p><strong>Category:</strong> Frontend, JavaScript, React</p>
+          <p>An overview of modern frontend development workflows, focusing on the speed and efficiency of React and Vite.</p>
+        </div>
+      </div>
+    
+        <div class="talk break">
+          <div class="time">01:30 PM - 02:30 PM</div>
+          <div class="details">
+            <h3>Lunch Break</h3>
+          </div>
+        </div>
+      
+      <div class="talk" data-category="security cryptography">
+        <div class="time">02:30 PM - 03:30 PM</div>
+        <div class="details">
+          <h3>The Quantum Computing Threat to Cryptography</h3>
+          <p><strong>Speakers:</strong> David Chen</p>
+          <p><strong>Category:</strong> Security, Cryptography</p>
+          <p>Understand the potential impact of quantum computing on current cryptographic standards and and explore post-quantum solutions.</p>
+        </div>
+      </div>
+    
+      <div class="talk" data-category="data science visualization">
+        <div class="time">03:40 PM - 04:40 PM</div>
+        <div class="details">
+          <h3>Data Storytelling: Visualizing Insights</h3>
+          <p><strong>Speakers:</strong> Maria Garcia</p>
+          <p><strong>Category:</strong> Data Science, Visualization</p>
+          <p>Discover how to turn raw data into compelling stories using modern data visualization techniques and tools.</p>
+        </div>
+      </div>
+    
+      <div class="talk" data-category="devops culture">
+        <div class="time">04:50 PM - 05:50 PM</div>
+        <div class="details">
+          <h3>DevOps Culture: Beyond the Tools</h3>
+          <p><strong>Speakers:</strong> James Brown, Patricia Miller</p>
+          <p><strong>Category:</strong> DevOps, Culture</p>
+          <p>A talk about the cultural and organizational changes needed to successfully implement DevOps practices.</p>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <script>
+    const searchInput = document.getElementById('search');
+    const talks = document.querySelectorAll('.talk:not(.break)');
+
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase().trim();
+      talks.forEach(talk => {
+        const categories = talk.dataset.category;
+        if (categories.includes(searchTerm)) {
+          talk.classList.remove('hidden');
+        } else {
+          talk.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
